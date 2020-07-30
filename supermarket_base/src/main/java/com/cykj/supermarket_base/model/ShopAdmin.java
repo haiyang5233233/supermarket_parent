@@ -1,29 +1,28 @@
 package com.cykj.supermarket_base.model;
 
-public class Admin {
+import java.util.Date;
+
+public class ShopAdmin {
     private int id;
     private String account;
     private String name;
     private String pwd;
-    private int state;
-    private String stateText;
-    private int roleId;
-    private String roleName;
+    private int shopId;
+    private String shopName;
     private String tel;
+    private Date createTime;
 
-    public Admin() {
+    public ShopAdmin() {
     }
 
-    public Admin(int id, String account, String name, String pwd, int state, String stateText, int roleId, String roleName, String tel) {
+    public ShopAdmin(int id, String account, String name, String pwd, int shopId, String tel, Date createTime) {
         this.id = id;
         this.account = account;
         this.name = name;
         this.pwd = pwd;
-        this.state = state;
-        this.stateText = stateText;
-        this.roleId = roleId;
-        this.roleName = roleName;
+        this.shopId = shopId;
         this.tel = tel;
+        this.createTime = createTime;
     }
 
     public int getId() {
@@ -58,36 +57,20 @@ public class Admin {
         this.pwd = pwd;
     }
 
-    public int getState() {
-        return state;
+    public int getShopId() {
+        return shopId;
     }
 
-    public void setState(int state) {
-        this.state = state;
+    public void setShopId(int shopId) {
+        this.shopId = shopId;
     }
 
-    public String getStateText() {
-        return stateText;
+    public String getShopName() {
+        return shopName;
     }
 
-    public void setStateText(String stateText) {
-        this.stateText = stateText;
-    }
-
-    public int getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(int roleId) {
-        this.roleId = roleId;
-    }
-
-    public String getRoleName() {
-        return roleName;
-    }
-
-    public void setRoleName(String roleName) {
-        this.roleName = roleName;
+    public void setShopName(String shopName) {
+        this.shopName = shopName;
     }
 
     public String getTel() {
@@ -96,5 +79,13 @@ public class Admin {
 
     public void setTel(String tel) {
         this.tel = tel;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 }
