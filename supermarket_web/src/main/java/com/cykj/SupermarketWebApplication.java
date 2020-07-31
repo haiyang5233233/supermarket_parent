@@ -11,7 +11,10 @@ public class SupermarketWebApplication {
     public static void main(String[] args) {
         admin=new Admin();
         admin.setAccount("zhaohy");
+        admin.setCardId(11);
         System.out.println(admin.getAccount());
+
+        System.out.println(admin.getCardId());
         SpringApplication.run(SupermarketWebApplication.class, args);
     }
 

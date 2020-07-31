@@ -6,12 +6,21 @@ public class Admin {
     private String name;
     private String pwd;
     private int state;
+    private int cardId;
     private String stateText;
     private int roleId;
     private String roleName;
     private String tel;
 
     public Admin() {
+    }
+
+    public int getCardId() {
+        return cardId;
+    }
+
+    public void setCardId(int cardId) {
+        this.cardId = cardId;
     }
 
     public Admin(int id, String account, String name, String pwd, int state, String stateText, int roleId, String roleName, String tel) {
