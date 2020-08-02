@@ -24,15 +24,14 @@ public class LoginControl {
     @ResponseBody
 //    @Log(operationType = "操作",operationName = "管理员登录")
     //管理员登录
-    public String login(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String adminJson = request.getParameter("adminJson");
-        System.out.println(adminJson);
-        Admin userAdmin = JSON.parseObject(adminJson, Admin.class);
-        Admin admin= loginService.login(userAdmin);
+    public String login(String account,String pwd) throws IOException {
+
+        Admin admin = new Admin();
+        admin.setAccount(account);
+        admin.setPwd(pwd);
+
+         admin= loginService.login(admin);
         if (admin != null) {
-            HttpSession session = request.getSession();
-            session.setAttribute("admin", admin);
-            request.getSession().setAttribute("isLogin", true);
             return "success";
         } else {
             return "error";
